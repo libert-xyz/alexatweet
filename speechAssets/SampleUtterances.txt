@@ -1,0 +1,14 @@
+HelpIntent for help
+HelpIntent help
+NoIntent no
+YesIntent yes
+FollowersIntent followers
+FollowingsIntent followings
+
+NumberOfTweetsIntent number of tweets
+NumberOfTweetsIntent tweets numbers
+NumberOfTweetsIntent how many tweets do I have
+NumberOfTweetsIntent how many tweets do I have in my account
+
+
+AccountDateIntent creation date

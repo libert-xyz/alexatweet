@@ -1,0 +1,52 @@
+{
+  "intents": [
+    {
+      "intent": "FollowersIntent"
+    },
+        {
+      "intent": "FollowingsIntent"
+    },
+    {
+      "intent": "NumberOfTweetsIntent"
+    },
+    {
+      "intent": "AccountDateIntent"
+    },
+    {
+      "intent": "AMAZON.CancelIntent"
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    },
+    {
+      "intent": "AMAZON.NextIntent"
+    },
+    {
+      "intent": "AMAZON.NoIntent"
+    },
+    {
+      "intent": "AMAZON.PauseIntent"
+    },
+    {
+      "intent": "AMAZON.PreviousIntent"
+    },
+    {
+      "intent": "AMAZON.RepeatIntent"
+    },
+    {
+      "intent": "AMAZON.ResumeIntent"
+    },
+    {
+      "intent": "AMAZON.StopIntent"
+    },
+    {
+      "intent": "HelpIntent"
+    },
+    {
+      "intent": "NoIntent"
+    },
+    {
+      "intent": "YesIntent"
+    }
+  ]
+}

@@ -8,16 +8,13 @@ from flask_oauthlib.client import OAuth
 from flask_oauthlib.contrib.apps import twitter
 
 app = Flask(__name__)
-#app.secret_key = os.environ['FLASK_SECRET_KEY']
-app.secret_key = 'test'
+app.secret_key = os.environ['FLASK_SECRET_KEY']
 
 oauth = OAuth(app)
 twitter = oauth.remote_app(
     'twitter',
-    #consumer_key=os.environ['TWITTER_CONSUMER_KEY'],
-    consumer_key="fdsafsdaf",
-    #consumer_secret=os.environ['TWITTER_CONSUMER_SECRET'],
-    consumer_secret="fdsafsadf",
+    consumer_key=os.environ['TWITTER_CONSUMER_KEY'],
+    consumer_secret=os.environ['TWITTER_CONSUMER_SECRET'],
     base_url='https://api.twitter.com/1.1/',
     request_token_url='https://api.twitter.com/oauth/request_token',
     access_token_url='https://api.twitter.com/oauth/access_token',

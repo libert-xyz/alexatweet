@@ -1,8 +1,19 @@
-welcome: Welcome to tweetInfo, you can say followers or following to hear the count of followers or followings you have. You can also say number of tweets to hear how many tweets you have posted in your account. And finally you can say Creation Day, to hear when was your account created. So how can I help you?
+welcome: Welcome to tweetInfo, you can say followers or following to hear how many followers or followings you have. You can also say number of tweets to hear how many tweets you have posted in your account. And finally you can say Creation Day, to hear when was your account created. So how can I help you?
 
-followers: You have a total of 500 followers. Something else?
+followers: You have a total of {{ count }} followers. Something else?
 
+followings: You follow to {{ count }} people. Something else?
 
-followings: You follow to 6000 people. Something else?
+tweets: You have posted {{ count }} tweets. Something else?
 
-accountDate: Your account was created in August 17 1988
+accountDate: Your account was created in {{ count }}. Something else?
+
+stop: Ok, goodbye
+
+yes_response: You can say, followers or following to hear how many followers or followings you have. You can also say number of tweets to hear how many tweets you have posted in your account. And finally you can say Creation Day, to hear when was your account created. So how can I help you?
+
+no_reponse: Ok, goodbye
+
+help: Sure, here is some help, You can say, followers or following to hear how many followers or followings you have. You can also say number of tweets to hear how many tweets you have posted in your account. And finally you can say Creation Day, to hear when was your account created. So how can I help you?
+
+error_temp: There was an error communicating with Twitter, please try again later

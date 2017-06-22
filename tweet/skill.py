@@ -28,7 +28,10 @@ def followers():
         error_response = render_template('error_temp')
         return statement(error_response)
     followers = render_template('followers',count=count)
-    return question(followers)
+    return question(followers) \
+        .standard_card(title='Followers...',
+        text=followers,
+        small_image_url='https://pbs.twimg.com/app_img/877655491240919040/EBqe8Bvh?format=jpg&name=73x73')
 
 
 @ask.intent('FollowingsIntent')
@@ -38,7 +41,10 @@ def followings():
         error_response = render_template('error_temp')
         return statement(error_response)
     followings = render_template('followings',count=count)
-    return question(followings)
+    return question(followings) \
+        .standard_card(title='Friends...',
+        text=followings,
+        small_image_url='https://pbs.twimg.com/app_img/877655491240919040/EBqe8Bvh?format=jpg&name=73x73')
 
 @ask.intent('NumberOfTweetsIntent')
 def number_of():
@@ -47,16 +53,23 @@ def number_of():
         error_response = render_template('error_temp')
         return statement(error_response)
     tweet = render_template('tweets',count=count)
-    return question(tweet)
+    return question(tweet) \
+        .standard_card(title='Number of Tweets...',
+        text=tweet,
+        small_image_url='https://pbs.twimg.com/app_img/877655491240919040/EBqe8Bvh?format=jpg&name=73x73')
 
 @ask.intent('AccountDateIntent')
 def account_date():
+
     count = creationDate(session.user.accessToken)
     if count == 'Error':
         error_response = render_template('error_temp')
         return statement(error_response)
     account = render_template('accountDate',count=count)
-    return question(account)
+    return question(account) \
+        .standard_card(title='Account creation date...',
+        text=account,
+        small_image_url='https://pbs.twimg.com/app_img/877655491240919040/EBqe8Bvh?format=jpg&name=73x73')
 
 @ask.intent('StopIntent')
 def stop_intent():

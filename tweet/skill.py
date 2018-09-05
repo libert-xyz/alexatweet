@@ -12,10 +12,14 @@ log = logging.getLogger()
 log.addHandler(logging.StreamHandler())
 log.setLevel(logging.DEBUG)
 logging.getLogger('flask_ask').setLevel(logging.DEBUG)
-
+auth_url = 'https://tweeter-info-oauth.herokuapp.com/authorize'
 
 @ask.launch
 def launch():
+    if session.user.get('accessToken') == None:
+        link_account_response = render_template('link_acct')
+        return statement(link_account_response) \
+            .link_account_card()
     welcome = render_template('welcome')
     print session.user.accessToken
     return question(welcome)
@@ -23,6 +27,10 @@ def launch():
 
 @ask.intent('FollowersIntent')
 def followers():
+    if session.user.get('accessToken') == None:
+        link_account_response = render_template('link_acct')
+        return statement(link_account_response) \
+            .link_account_card()
     count = get_followers(session.user.accessToken)
     if count == 'Error':
         error_response = render_template('error_temp')
@@ -36,6 +44,10 @@ def followers():
 
 @ask.intent('FollowingsIntent')
 def followings():
+    if session.user.get('accessToken') == None:
+        link_account_response = render_template('link_acct')
+        return statement(link_account_response) \
+            .link_account_card()
     count = get_following(session.user.accessToken)
     if count == 'Error':
         error_response = render_template('error_temp')
@@ -48,6 +60,10 @@ def followings():
 
 @ask.intent('NumberOfTweetsIntent')
 def number_of():
+    if session.user.get('accessToken') == None:
+        link_account_response = render_template('link_acct')
+        return statement(link_account_response) \
+            .link_account_card()
     count = tweetCount(session.user.accessToken)
     if count == 'Error':
         error_response = render_template('error_temp')
@@ -60,6 +76,10 @@ def number_of():
 
 @ask.intent('AccountDateIntent')
 def account_date():
+    if session.user.get('accessToken') == None:
+        link_account_response = render_template('link_acct')
+        return statement(link_account_response) \
+            .link_account_card()
 
     count = creationDate(session.user.accessToken)
     if count == 'Error':
@@ -90,6 +110,11 @@ def yes_intent():
 def help_intent():
     help_template = render_template('help')
     return question(help_template)
+
+@ask.intent('CancelIntent')
+def cancel_intent():
+    cancel_template = render_template('cancel_response')
+    return statement(cancel_template)
 
 
 if __name__ == '__main__':

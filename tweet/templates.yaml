@@ -1,4 +1,4 @@
-welcome: Welcome to tweetInfo, you can say followers or following to hear how many followers or followings you have. You can also say number of tweets to hear how many tweets you have posted in your account. And finally you can say Creation Day, to hear when was your account created. So how can I help you?
+welcome: Welcome to tweetInfo, you can say followers or following, to hear how many followers or followings you have. You can also say number of tweets to hear how many tweets you have posted in your account. And finally you can say Creation Day, to hear when was your account created. So how can I help you?
 
 followers: You have a total of {{ count }} followers. Something else?
 
@@ -10,10 +10,14 @@ accountDate: Your account was created in {{ count }}. Something else?
 
 stop: Ok, goodbye
 
-yes_response: You can say, followers or following to hear how many followers or followings you have. You can also say number of tweets to hear how many tweets you have posted in your account. And finally you can say Creation Day, to hear when was your account created. So how can I help you?
+yes_response: You can say, followers or following, to hear how many followers or followings you have. You can also say number of tweets to hear how many tweets you have posted in your account. And finally you can say Creation Day, to hear when was your account created. So how can I help you?
 
 no_reponse: Ok, goodbye
 
-help: Sure, here is some help, You can say, followers or following to hear how many followers or followings you have. You can also say number of tweets to hear how many tweets you have posted in your account. And finally you can say Creation Day, to hear when was your account created. So how can I help you?
+help: Sure, here is some help, You can say, followers or following, to hear how many followers or followings you have. You can also say number of tweets to hear how many tweets you have posted in your account. And finally you can say Creation Day, to hear when was your account created. So how can I help you?
 
 error_temp: There was an error communicating with Twitter, please try again later
+
+cancel_response: Ok, goodbye
+
+link_acct: tweetInfo, before I can access your information, I need you to link the skill with your Twitter account. To do this simple launch the alexa app in your smartphone, tablet or computer, then find the tweetInfo card and select the link account option.
